@@ -37,7 +37,7 @@ const EventDetails = () => {
     try {
       setLoading(true);
       console.log("✅ Fetching event for ID:", id);
-      const response = await fetch(`http://localhost:5000/events/${id}`);
+      const response = await fetch(`https://event-booking-4k6b.onrender.com/events/${id}`);
       if (!response.ok) {
         throw new Error(`Server error: ${response.status}`);
       }
@@ -59,7 +59,7 @@ const EventDetails = () => {
 
     try {
       console.log("✅ Fetching user tickets for:", userId?.id, id);
-      const response = await fetch(`http://localhost:5000/userTickets/${userId.id}/${id}`);
+      const response = await fetch(`https://event-booking-4k6b.onrender.com/userTickets/${userId.id}/${id}`);
       if (!response.ok) {
         throw new Error(`Server error: ${response.status}`);
       }
@@ -91,7 +91,7 @@ const EventDetails = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/book", {
+      const response = await fetch("https://event-booking-4k6b.onrender.com/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

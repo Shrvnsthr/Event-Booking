@@ -41,7 +41,7 @@ const MyBooking = () => {
 
     const fetchBookings = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/my-bookings?user_id=${parsedUser.id}`, {
+        const response = await fetch(`https://event-booking-4k6b.onrender.com/my-bookings?user_id=${parsedUser.id}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });

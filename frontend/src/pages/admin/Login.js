@@ -19,7 +19,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isLogin ? "http://localhost:5000/login" : "http://localhost:5000/signup";
+    const url = isLogin ? "https://event-booking-4k6b.onrender.com/login" : "https://event-booking-4k6b.onrender.com/signup";
 
     // Prepare payload: exclude role for login, include for signup
     const payload = isLogin

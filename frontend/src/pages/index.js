@@ -124,7 +124,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("http://localhost:5000/events");
+        const response = await fetch("https://event-booking-4k6b.onrender.com/events");
         const data = await response.json();
         setEvents(data);
         setLoading(false);
@@ -136,7 +136,7 @@ const EventList = () => {
 
     fetchEvents();
 
-    const socket = io("http://localhost:5000");
+    const socket = io("https://event-booking-4k6b.onrender.com");
     socket.on("eventsUpdated", () => {
       console.log("Events have been updated, refetching...");
       fetchEvents();

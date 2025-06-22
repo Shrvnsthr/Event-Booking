@@ -11,7 +11,7 @@ const EventsPage = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/events");
+        const res = await fetch("https://event-booking-4k6b.onrender.com/events");
         const data = await res.json();
 
         console.log("Fetched Events Array:", data); // 🔍 Debug line
@@ -29,7 +29,7 @@ const EventsPage = () => {
   const handleDelete = async (id) => {
     if (confirm("Are you sure you want to delete this event?")) {
       try {
-        const res = await fetch(`http://localhost:5000/events/${id}`, {
+        const res = await fetch(`https://event-booking-4k6b.onrender.com/events/${id}`, {
           method: "DELETE",
         });
 

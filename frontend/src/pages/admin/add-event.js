@@ -81,7 +81,7 @@ const AddEventForm = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/events", {
+      const res = await fetch("https://event-booking-4k6b.onrender.com/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(eventData),
