@@ -23,64 +23,45 @@ const Navbar = () => {
   };
 
   return (
-    <header className="navbar1 relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-neutral-800">
-      <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
-        <div className="nav-items flex items-center justify-between">
-          <Link
-            className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
-            href="/"
-            aria-label="Brand"
-          >
-            <span className="navbar-logo inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white">
-              BookYourEvent
-            </span>
-          </Link>
-        </div>
+  <header className="bg-white dark:bg-neutral-800 py-3 shadow">
+  <nav className="max-w-[1280px] mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+    
+    {/* Logo */}
+    <Link href="/" className="text-xl font-semibold dark:text-white mb-3 sm:mb-0">
+      BookYourEvent
+    </Link>
 
-        <div className="sm:block">
-          <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-            {user ? (
-              <>
-                <span className="font-medium text-blue-500">
-                  Welcome, {user.name} ({user.role})
-                </span>
-                {user.role === "admin" && (
-                  <Link
-                    className="font-medium text-blue-500 hover:text-blue-700 focus:outline-none"
-                    href="/admin/add-event"
-                  >
-                    Dashboard
-                  </Link>
-                )}
-                {user.role === "user" && (
-                  <Link
-                    className="font-medium text-blue-500 hover:text-blue-700 focus:outline-none"
-                    href="/my-booking"
-                  >
-                    My Booking
-                  </Link>
-                )}
-              
-                <button
-                  onClick={handleLogout}
-                  className="font-medium text-red-500 hover:text-red-700 focus:outline-none"
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <Link
-                className="font-medium text-blue-500 hover:text-blue-700 focus:outline-none"
-                href="/admin/Login"
-                aria-current="page"
-              >
-                Login
-              </Link>
-            )}
-          </div>
-        </div>
-      </nav>
-    </header>
+    {/* Buttons & Welcome text */}
+    <div className="flex flex-col sm:flex-row gap-4 items-center">
+      {user ? (
+        <>
+          <span className="text-blue-500 font-medium">
+            Welcome, {user.name} ({user.role})
+          </span>
+          {user.role === "admin" && (
+            <Link href="/admin/add-event" className="text-blue-500 hover:text-blue-700">
+              Dashboard
+            </Link>
+          )}
+          {user.role === "user" && (
+            <Link href="/my-booking" className="text-blue-500 hover:text-blue-700">
+              My Booking
+            </Link>
+          )}
+          <button onClick={handleLogout} className="text-red-500 hover:text-red-700">
+            Logout
+          </button>
+        </>
+      ) : (
+        <Link href="/admin/Login" className="text-blue-500 hover:text-blue-700">
+          Login
+        </Link>
+      )}
+    </div>
+
+  </nav>
+</header>
+
   );
 };
 
