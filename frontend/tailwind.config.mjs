@@ -1,4 +1,4 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,13 +13,6 @@ export default {
       },
     },
   },
-  safelist: [
-    "bg-blue-600",
-    "hover:bg-blue-500",
-    "text-white",
-    "text-blue-400",
-    "bg-gray-900",
-    "bg-gray-700",
-  ],
+  // darkMode: "class", // ✅ required for manual dark mode via class
   plugins: [],
 };
