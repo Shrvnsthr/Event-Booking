@@ -12,6 +12,7 @@ const InputField = ({ label, type, id, value, onChange, required, min, placehold
       <textarea
         id={id}
         value={value}
+
         onChange={onChange}
         required={required}
         placeholder={placeholder}
