@@ -5,9 +5,19 @@
 @tailwind utilities;
 
 * {
-  padding: 0%;
-  margin: 0%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
 .navbar-logo{
  font-size: 22px;
 }
