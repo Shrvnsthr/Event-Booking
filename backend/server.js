@@ -1,12 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const http = require("http"); // ✅ socket.io के लिए
 const { Server } = require("socket.io"); // ✅ socket.io के लिए
-
+   require("dotenv").config();
+ 
 const app = express();
 const port = 5000;
 const secretKey = "hohdind_ndond_ndoidf";
