@@ -1,14 +1,24 @@
-:root {
-  --background: #ffffff;
-  --foreground: #000000;
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.dark {
-  --background: #0f172a;
-  --foreground: #ffffff;
+.navbar-logo{
+ font-size: 22px;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
+.navbar1{
+  height: 60px;
 }
+.admin-name{
+  font-size: 20px;
+  overflow: hidden;
+}
+
