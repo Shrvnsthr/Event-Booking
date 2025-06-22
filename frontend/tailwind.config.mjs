@@ -13,5 +13,6 @@ export default {
       },
     },
   },
+  // darkMode: "class", // ✅ required for manual dark mode via class
   plugins: [],
 };
