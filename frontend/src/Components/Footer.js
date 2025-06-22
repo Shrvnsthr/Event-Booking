@@ -99,7 +99,7 @@ const Footer = () => {
             <div className="inline-flex items-center">
               <div className="border-s border-neutral-700 ps-5 ms-5">
                 <p className="text-sm text-neutral-400">
-                  © 2025 BookYourEvent All rights reserved .  SHRAVAN SUTHAR
+                  © 2025 BookYourEvent All rights reserved .      SHRAVAN SUTHAR
                 </p>
               </div>
             </div>
